@@ -1,0 +1,47 @@
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Georgia", serif;
+  
+  --color-surface: #0D0D0D;
+  --color-surface-container: #141414;
+  --color-surface-container-low: #1A1A1A;
+  --color-surface-container-lowest: #050505;
+  --color-primary-container: #D4FF00;
+  --color-on-primary-container: #000000;
+  --color-on-surface-variant: rgba(255, 255, 255, 0.5);
+  --color-outline-variant: rgba(255, 255, 255, 0.1);
+  --color-accent: #D4FF00;
+}
+
+@layer base {
+  body {
+    @apply bg-surface text-[#E0E0E0] antialiased selection:bg-accent selection:text-black;
+  }
+  
+  h1, h2, h3 {
+    @apply font-serif italic tracking-tight;
+  }
+}
+
+.ambient-shadow-sm {
+  box-shadow: none;
+}
+
+.ambient-shadow-md {
+  box-shadow: none;
+}
+
+.brutalist-border {
+  @apply border border-white/10;
+}
+
+.neon-text {
+  @apply text-accent;
+}
+
+.vertical-label {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+}
